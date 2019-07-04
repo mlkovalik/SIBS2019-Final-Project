@@ -130,7 +130,7 @@ plot(drugConsumption$VolatileSubstanceAbuse)
       geom_bar(aes(y=(..count..)/sum(..count..)), position = "dodge") +
       facet_grid(. ~ Age) +
       labs(title="Alcohol Consumption by Age", x="Latest Alcohol Consumption", y="Percent") +
-      theme(axis.text.x = element_text(angle = 90), plot.title = element_text(size = 20, face="bold.italic"), legend.position="bottom", 
+      theme(axis.text.x = element_text(angle = 90), plot.title = element_text(size = 20, face="bold.italic"), legend.position="bottom",
             legend.box = "horizontal") 
     
   #Alcohol consumption ~ country
