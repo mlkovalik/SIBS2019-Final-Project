@@ -257,3 +257,10 @@ plot(drugConsumption$VolatileSubstanceAbuse)
             legend.box = "horizontal") 
     
 
+#Maya thinks she knows how to make a categorical variable a binary one
+#making nicotine use a binary variable 
+df <- data.frame(Nicotine=letters[1:7], please = c("Never", ">Decade", "lastDecade", "lastYear", "lastMonth", "lastWeek", "LastDay"))
+levels(df$please) <- c(1,1, 1, 1, 0, 0, 0)
+#above two lines changes Nicotine use into a binary variable
+names(df)[2] <- "recent nicotine"
+plot(drugConsumption$Age,df$please)
